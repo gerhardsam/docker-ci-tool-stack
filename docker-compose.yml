@@ -21,7 +21,7 @@ services:
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     - /usr/local/bin/docker:/usr/bin/docker
-    - /opt/jenkins:/var/jenkins_home
+    - data:/var/jenkins_home
   depends_on:
     - nexus
     - gitlab
@@ -96,3 +96,6 @@ services:
     - /opt/gitlab/config:/etc/gitlab
     - /opt/gitlab/logs:/var/log/gitlab
     - /opt/gitlab/data:/var/opt/gitlab
+
+volumes:
+  data:
