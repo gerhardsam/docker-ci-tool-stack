@@ -24,7 +24,6 @@ services:
     - data:/var/jenkins_home
   depends_on:
     - nexus
-    - gitlab
     - sonar
     - seleniumhub
   environment:
@@ -79,23 +78,6 @@ services:
    - HUB_PORT_4444_TCP_ADDR=seleniumhub
   depends_on:
     - seleniumhub
-
- gitlab:
-  image: gitlab/gitlab-ce:8.11.3-ce.1
-  restart: always
-  networks:
-    - prodnetwork
-  environment:
-    GITLAB_OMNIBUS_CONFIG: |
-      # external_url 'https://gitlab.example.com'
-      # Add any other gitlab.rb configuration here, each on its own line
-  ports:
-    - "10080:80"
-    - "10022:22"
-  volumes:
-    - /opt/gitlab/config:/etc/gitlab
-    - /opt/gitlab/logs:/var/log/gitlab
-    - /opt/gitlab/data:/var/opt/gitlab
 
 volumes:
   data:
