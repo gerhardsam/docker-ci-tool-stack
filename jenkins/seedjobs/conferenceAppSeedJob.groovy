@@ -217,5 +217,6 @@ listView('Conference App') {
         lastSuccess()
         lastFailure()
         lastDuration()
+        lastBuildConsole()
     }
 }

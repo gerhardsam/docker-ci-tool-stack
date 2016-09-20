@@ -64,5 +64,6 @@ listView('Job DSL Tutorial') {
         lastSuccess()
         lastFailure()
         lastDuration()
+        lastBuildConsole()
     }
 }

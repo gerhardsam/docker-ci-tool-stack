@@ -33,5 +33,6 @@ listView('MB GitHub Jobs') {
         lastSuccess()
         lastFailure()
         lastDuration()
+        lastBuildConsole()
     }
 }

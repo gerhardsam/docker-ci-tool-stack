@@ -66,5 +66,6 @@ listView('admin docker') {
     lastSuccess()
     lastFailure()
     lastDuration()
+    lastBuildConsole()
   }
 }

@@ -42,5 +42,6 @@ listView('Selenium') {
         lastSuccess()
         lastFailure()
         lastDuration()
+        lastBuildConsole()
     }
 }
